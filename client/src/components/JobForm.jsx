@@ -15,7 +15,7 @@ function JobForm({ mode, jobs, setJobs }) {
   // ✅ Fetch the job directly if in edit mode
   useEffect(() => {
     if (mode === "edit" && id) {
-      fetch(`http://localhost:5000/api/jobs/${id}`)
+      fetch(`${import.meta.VITE_BACKEND_URL}/api/jobs/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setTitle(data.title || "");
@@ -39,13 +39,13 @@ function JobForm({ mode, jobs, setJobs }) {
     try {
       let res;
       if (mode === "edit") {
-        res = await fetch(`http://localhost:5000/api/jobs/${id}`, {
+        res = await fetch(`${import.meta.VITE_BACKEND_URL}/api/jobs/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(jobData),
         });
       } else {
-        res = await fetch("http://localhost:5000/api/jobs", {
+        res = await fetch(`${import.meta.VITE_BACKEND_URL}/api/jobs`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(jobData),

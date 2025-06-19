@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const Job = require("./models/Job"); // Make sure this file exists
+const Job = require("./models/job"); // Make sure this file exists
 
 const app = express();
 const PORT = process.env.PORT || 5000;
