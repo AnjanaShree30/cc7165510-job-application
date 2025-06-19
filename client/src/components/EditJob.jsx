@@ -13,7 +13,7 @@ function EditJob() {
   });
 
   useEffect(() => {
-    fetch(`${import.meta.VITE_BACKEND_URL}/api/jobs/${id}`)
+    fetch(`http://localhost:5000/api/jobs/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch job");
         return res.json();
@@ -36,7 +36,7 @@ function EditJob() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${import.meta.VITE_BACKEND_URL}/api/jobs/${id}`, {
+    const res = await fetch(`http://localhost:5000/api/jobs/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
