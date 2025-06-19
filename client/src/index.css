@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Global body style */
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Link style */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  color: #1d4ed8;
+}
+
+/* Button style */
+button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+/* Heading style */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #111827;
+}
