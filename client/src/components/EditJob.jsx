@@ -48,7 +48,7 @@ function EditJob() {
       alert("Job updated successfully");
       navigate("/jobs");
     } else {
-      alert("Failed to update job");
+      alert("Failed to update jobs");
     }
   };
 
