@@ -11,4 +11,4 @@ const jobSchema = new mongoose.Schema({
   email:String,
 });
 
-module.exports = mongoose.model("Job", jobSchema);
+module.exports = mongoose.models("Job", jobSchema);
