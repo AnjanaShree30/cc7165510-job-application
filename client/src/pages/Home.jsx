@@ -6,7 +6,7 @@ function Home() {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/jobs`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/jobs`)
             .then((res) => res.json())
             .then((data) => setJobs(data))
             .catch((error) => {
@@ -17,7 +17,7 @@ function Home() {
 
     const handleDelete = async (id) => {
         try {
-            const res = await fetch(`http://localhost:5000/api/jobs/${id}`, {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/jobs/${id}`, {
                 method: 'DELETE',
             });
             if (res.ok) {
